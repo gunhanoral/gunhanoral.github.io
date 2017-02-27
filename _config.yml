@@ -21,6 +21,7 @@ author: 'Günhan Oral'
 author_image: "/assets/images/author.jpg"
 
 paginate:	5
+highlighter: rogue
 
 url: "http://gunhanoral.github.io" # the base hostname & protocol for your site
 baseurl: ""
