@@ -18,7 +18,7 @@
     .ge    { font-style: italic } // Generic.Emph
     .gr    { color: #a00 } // Generic.Error
     .gh    { color: #999 } // Generic.Heading
-    .gi    { color: #000; background-color: #dfd } // Generic.Inserted
+    .gi    { color: #000; background-color: #fff } // Generic.Inserted #dfd
     .gi .x { color: #000; background-color: #afa } // Generic.Inserted.Specific
     .go    { color: #888 } // Generic.Output
     .gp    { color: #555 } // Generic.Prompt
@@ -43,7 +43,7 @@
     .nt    { color: #000080 } // Name.Tag
     .nv    { color: #008080 } // Name.Variable
     .ow    { font-weight: bold } // Operator.Word
-    .w     { color: #fff } // Text.Whitespace #bbb
+    .w     { color: #bbb } // Text.Whitespace #bbb
     .mf    { color: #099 } // Literal.Number.Float
     .mh    { color: #099 } // Literal.Number.Hex
     .mi    { color: #099 } // Literal.Number.Integer
