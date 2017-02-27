@@ -8,7 +8,7 @@ image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.JPG
 ---
 Siteyi yapılandırırken fotoğrafımın boyutlarını ölçeklendirmem gerekti. Elimin altında o esnada uygun bir program bulunmadığı için Python ile bunu yapıp yapamayacağımı merak ettim. Kısa bir google aramasından sonra [bu siteye][resize] ulaştım. Burada yer alan ilk kod parçasında basit aritmetik işlemlerle istenen genişlikte, oranlı bir resim elde edilebiliyor.
 
-{% highlight python %}
+```python
 from PIL import Image
 basewidth = 300
 img = Image.open(‘fullsized_image.jpg’)
@@ -16,9 +16,9 @@ wpercent = (basewidth / float(img.size[0]))
 hsize = int((float(img.size[1]) * float(wpercent)))
 img = img.resize((basewidth, hsize), Image.ANTIALIAS)
 img.save(‘resized_image.jpg’)
-{% endhighlight %}
+```
 
-Eğer yükseklik bilgisi üüzerinden ilerlemek gerekirse aşağıdaki kod kullanılabilir:
+Eğer yükseklik bilgisi üzerinden ilerlemek gerekirse aşağıdaki kod parçası kullanılabilir:
 
 ```python
 baseheight = 560
