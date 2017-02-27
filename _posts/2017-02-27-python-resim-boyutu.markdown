@@ -20,7 +20,7 @@ img.save(‘resized_image.jpg’)
 
 Eğer yükseklik bilgisi üüzerinden ilerlemek gerekirse aşağıdaki kod kullanılabilir:
 
-```python3
+```python
 baseheight = 560
 img = Image.open(‘fullsized_image.jpg’)
 hpercent = (baseheight / float(img.size[1]))
