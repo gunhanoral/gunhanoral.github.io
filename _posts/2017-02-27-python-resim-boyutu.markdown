@@ -20,13 +20,13 @@ img.save(‘resized_image.jpg’)
 
 Eğer yükseklik bilgisi üüzerinden ilerlemek gerekirse aşağıdaki kod kullanılabilir:
 
-{% highlight python %}
+```python3
 baseheight = 560
 img = Image.open(‘fullsized_image.jpg’)
 hpercent = (baseheight / float(img.size[1]))
 wsize = int((float(img.size[0]) * float(hpercent)))
 img = img.resize((wsize, baseheight), Image.ANTIALIAS)
 img.save(‘resized_image.jpg’)
-{% endhighlight %}
+```
 
 [resize]:      https://opensource.com/life/15/2/resize-images-python
