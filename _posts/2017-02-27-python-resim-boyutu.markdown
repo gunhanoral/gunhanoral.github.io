@@ -6,7 +6,7 @@ categories: jekyll update
 tags: featured, python, image
 image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.JPG
 ---
-Siteyi yapılandırırken fotoğrafımın boyutlarını ölçeklendirmem gerektiğinde bu kadar temel bir işlemi yapabileceğim program bulamamak beni ufaktan afallattı.  Sonra da hazır elimin altında Python var diyip Python ile bunu yapıp yapamayacağımı görmek istedim. Kısa bir google aramasından sonra [bu siteye][resize] ulaştım. Burada yer alan ilk kod parçasını kullanarak basit aritmetik işlemlerle istenen genişlikte, oranlı bir resim elde edilebiliyor.
+Siteyi yapılandırırken fotoğrafımın boyutlarını ölçeklendirmem gerektiğinde bu kadar temel bir işlemi yapabileceğim program bulamamak beni ufaktan afallattı. Sonra da hazır elimin altında Python var diyip Python ile bunu yapıp yapamayacağımı görmek istedim. Kısa bir google aramasından sonra [bu siteye][resize] ulaştım. Burada yer alan ilk kod parçasını kullanarak basit aritmetik işlemlerle istenen genişlikte, oranlı bir resim elde edilebiliyor.
 
 ```python
 from PIL import Image
