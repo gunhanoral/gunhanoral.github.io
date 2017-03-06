@@ -9,7 +9,7 @@ image2: /assets/article_images/2017-03-06-usd-yukselisi/currency_mob.jpg
 ---
 Uzunca bir süredir doların yükseldiğini hepimiz biliyoruz. Peki ne kadar zamanda bu noktaya geldik? Eskiden nasıldı?
 
-Bunları gözlemleyebilmek için Türkiye Cumhuriyeti Merkez Bankası'nın [websitesindeki][tcmb] değerleri kullanarak grafik haline oluşturdum.
+Bunları gözlemleyebilmek için Türkiye Cumhuriyeti Merkez Bankası'nın [websitesindeki][tcmb] değerleri kullanarak bir grafik oluşturdum.
 
 Kullandığım kodları aşağıda bulabilirsiniz. 
 
