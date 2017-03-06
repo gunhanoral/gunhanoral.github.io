@@ -9,7 +9,7 @@ image2: /assets/article_images/2017-03-06-usd-yukselisi/currency_mob.jpg
 ---
 Uzunca bir süredir doların yükseldiğini hepimiz biliyoruz. Peki ne kadar zamanda bu noktaya geldik? Eskiden nasıldı?
 
-Bunları gözlemleyebilmek için Türkiye Cumhuriyeti Merkez Bankası'nın websitesine baktım ve sonucu bir grafik haline getirdim.
+Bunları gözlemleyebilmek için Türkiye Cumhuriyeti Merkez Bankası'nın [websitesindeki][tcmb] değerleri kullanarak grafik haline oluşturdum.
 
 Kullandığım kodları aşağıda bulabilirsiniz. 
 
@@ -85,3 +85,5 @@ p = figure(width=600, height=300, x_axis_type="datetime", tools=[hover])
 p.line(dolares.index, dolares.value, color='navy', alpha=0.5)
 show(p)
 ```
+
+[tcmb]:	http://evds.tcmb.gov.tr/cgi-bin/famecgi?cgi=$ozetweb&DIL=TR&ARAVERIGRUP=bie_dkdovizgn.db
