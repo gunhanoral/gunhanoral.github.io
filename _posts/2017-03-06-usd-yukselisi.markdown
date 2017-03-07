@@ -13,6 +13,8 @@ tags:
 image: /assets/article_images/2017-03-06-usd-yukselisi/currency.jpg
 image2: /assets/article_images/2017-03-06-usd-yukselisi/currency_mob.jpg
 ---
+![drawing][chart]
+
 Uzunca bir süredir doların yükseldiğini hepimiz biliyoruz. Peki ne kadar zamanda bu noktaya geldik? Eskiden nasıldı?
 
 Bunları gözlemleyebilmek için Türkiye Cumhuriyeti Merkez Bankası'nın [websitesindeki][tcmb] değerleri kullanarak bir grafik oluşturdum.
@@ -93,3 +95,4 @@ show(p)
 ```
 
 [tcmb]:	http://evds.tcmb.gov.tr/cgi-bin/famecgi?cgi=$ozetweb&DIL=TR&ARAVERIGRUP=bie_dkdovizgn.db
+[chart]: /assets/article_images/2017-03-06-usd-yukselisi/Dolares.png
