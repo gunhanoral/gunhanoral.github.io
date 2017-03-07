@@ -3,7 +3,13 @@ layout: post
 title:  "USD - TL karşılaştırması"
 date:   2017-03-06 14:34:25
 categories: python
-tags: featured, python, bokeh, usd, tl, parite
+tags:
+  - featured
+  - python
+  - bokeh
+  - usd
+  - tl
+  - parite
 image: /assets/article_images/2017-03-06-usd-yukselisi/currency.jpg
 image2: /assets/article_images/2017-03-06-usd-yukselisi/currency_mob.jpg
 ---
