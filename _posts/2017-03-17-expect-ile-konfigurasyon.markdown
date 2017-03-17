@@ -2,7 +2,7 @@
 layout: post
 title:  "tcl expect ile huawei konfigürasyonu almak"
 date:   2017-03-17 12:43:06
-categories: config
+categories: network
 tags:
   - tcl
   - expect

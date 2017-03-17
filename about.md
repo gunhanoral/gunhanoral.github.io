@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-This page is left blank
+This page is left blank intentionally.

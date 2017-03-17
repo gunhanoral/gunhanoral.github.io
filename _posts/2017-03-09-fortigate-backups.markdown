@@ -2,7 +2,7 @@
 layout: post
 title:  "Scp ile fortigate backup almak"
 date:   2017-03-09 22:42:25
-categories: python
+categories: security
 tags:
   - python
   - fortigate
