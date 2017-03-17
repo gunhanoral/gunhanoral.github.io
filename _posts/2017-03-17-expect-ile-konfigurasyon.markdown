@@ -8,13 +8,13 @@ tags:
   - expect
   - Huawei
   - config
-image: /assets/article_images/2017-03-09-fortigate-backups/bankvault.jpg
-image2: /assets/article_images/2017-03-09-fortigate-backups/bankvault_mob.jpg
-published: false
+image: /assets/article_images/2017-03-17-expect-ile-konfigurasyon/cables_l.jpg
+image2: /assets/article_images/2017-03-17-expect-ile-konfigurasyon/cables_m.jpg
+published: true
 ---
 Özellikle network cihazlarından çeşitli komut çıktılarını almak veya konfigürasyon değişikliği yapmak gerektiğinde expect akla ilk gelen seçeneklerden birisi. Cihazdan verilen yanıtlara göre çeşitli alt dallara inilebilmesi; yani "interface down ise şöyle yap, yok interface up fakat üzerinden trafik geçmemişse böyle yap" diyebilmenizi sağlayan bir yapıda olması expect'i uzunca bir süre otomatik konfigürasyon için biçilmiş kaftan kıldı. Aşağıda çok noktalı bir müşteriye ait Huawei cihazlarda snmp konfigürasyonu yapmak için kullandığım kodu bulabilirsiniz.
 
-Biraz açıklamam gerekirse ilgili host'a telnet olmayı deniyor. Telnet başarılı olursa username & password bilgilerini giriyor. Ardından prompt bekleyip uygun komutları gönderiyor. Ekrana da yapılan işlemle ilgili çeşitli logları yazıyor. 
+Biraz açıklamam gerekirse ilgili host'a telnet olmayı deniyor. Telnet başarılı olursa username & password bilgilerini giriyor. Ardından prompt bekleyip uygun komutları gönderiyor. Ekrana da yapılan işlemle ilgili çeşitli logları yazıyor.
 
 ``` tcl
 #!/usr/bin/expect
