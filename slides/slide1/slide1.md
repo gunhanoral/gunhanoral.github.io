@@ -41,10 +41,6 @@ with Türkçe karakters
 
 Content 3.1
 with codes
-``` python
-for i in range(10):
-	print('zaa')
-```
 
 ---
 
