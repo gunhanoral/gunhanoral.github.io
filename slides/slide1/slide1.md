@@ -6,17 +6,17 @@ theme: black
 transition: slide
 ---
 # Markdown Demo
-Slide 1
+				Slide 1
 
----
+				---
 
-## Slide 2
+				## Slide 2
 
-Content 2
+				Content 2
 
-Note: This will only appear in the speaker notes window.
+				Note: This will only appear in the speaker notes window.
 
---
+				--
 
 ## Subslide 2.1
 
