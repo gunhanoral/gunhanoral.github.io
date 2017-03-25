@@ -6,36 +6,46 @@ theme: black
 transition: slide
 ---
 # Markdown Demo
+Slide 1
 
 ---
 
-## External 1.1
+## Slide 2
 
-Content 1.1
+Content 2
 
 Note: This will only appear in the speaker notes window.
 
 --
 
-## External 1.2
-
-Content 1.2
-
----
-
-## External 2
+## Subslide 2.1
 
 Content 2.1
 
+--
+
+## Subslide 2.2
+
+Content 2.2
+
 ---
 
-## External 3.1
+## Slide 3
 
-Content 3.1
+Content 3
 with Türkçe karakters
 
 --
 
-## External 3.2
+## Subslide 3.1
 
-Content 3.2
+Content 3.1
+with codes
+``` python
+for i in range(10):
+	print('zaa')
+```
+
+---
+
+# Fin
