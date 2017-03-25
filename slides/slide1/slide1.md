@@ -21,6 +21,7 @@ Note: This will only appear in the speaker notes window.
 ## Subslide 2.1
 
 Content 2.1
+<img src="data/turknet_logo.jpg" alt="Drawing" style="width: 400px;"/>
 
 --
 
