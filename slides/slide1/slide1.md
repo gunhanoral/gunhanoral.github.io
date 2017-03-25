@@ -21,6 +21,7 @@ Note: This will only appear in the speaker notes window.
 ## Subslide 2.1
 
 Content 2.1
+<img src="data/turknet_logo.jpg" alt="Drawing" style="width: 400px;"/>
 
 --
 
@@ -41,6 +42,10 @@ with Türkçe karakters
 
 Content 3.1
 with codes
+``` python
+for i in range(10):
+	print('zaa')
+```
 
 ---
 
