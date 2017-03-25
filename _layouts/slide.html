@@ -57,7 +57,11 @@
 
     <div class="reveal">
       <div class="slides">
-        {{ content }}
+		  <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+		  	<script type="text/template">
+		  		{{ content }}
+		  	</script>
+		  </section>
       </div>
     </div>
 
