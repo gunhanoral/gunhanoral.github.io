@@ -26,7 +26,7 @@ paginate:	5
 url: "http://gunhanoral.github.io" # the base hostname & protocol for your site
 baseurl: ""
 #used to display twitter cards
-twitter_handle: '@yokuda'
+twitter_handle: '@_gunhanoral'
 
 #fill in disqus shortname to use disqus
 #disqus: disqus-shortname
@@ -36,7 +36,7 @@ google_analytics: UA-93027736-1
 # social icons and sharing options
 social:
   - icon:	twitter
-    url:	https://twitter.com/yokuda
+    url:	https://twitter.com/_gunhanoral
     desc: Follow me on twitter
     share_url: http://twitter.com/share
     share_title: ?text=
