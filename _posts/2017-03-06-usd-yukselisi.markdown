@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "USD - TL karşılaştırması"
+description: "Bir süredir doların durmak bilmeyen yükselişi bende bu trendin ne kadar zamandır var olduğuna dair merak uyandırdı. Basit bir grafik ile hangi yıllar ne seviyelerde olduğu, son yıllarda ne kadar arttığını birlikte görelim istedim."
 date:   2017-03-06 14:34:25
 categories: python
 tags:

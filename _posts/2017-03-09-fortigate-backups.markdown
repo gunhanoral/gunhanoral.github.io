@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Scp ile fortigate backup almak"
+description: "Fortigate firewall'larda config yedeği almanız gerektiğinde başvurabileceğiniz güzel ve basit bir yöntem. SCP ile güncel config'i yedekleyen bu basit program bir çok işinizi kolaylaştıracak."
 date:   2017-03-09 22:42:25
 categories: security
 tags:

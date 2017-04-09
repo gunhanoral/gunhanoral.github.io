@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Python ile resim boyutu ölçeklendirmek"
+description: "Kişisel web sitemin ilk postu bu siteyi düzenlerken gereksinim duyduğum ilk öğelerden birisi için, resim boyutu değiştirmek için çözüm sağladığı gibi Python çözümlerine güzel bir örnek oluşturuyor."
 date:   2017-02-27 22:42:25
 categories: python
 tags:
@@ -24,6 +25,7 @@ img.save(‘resized_image.jpg’)
 Eğer yükseklik bilgisi üzerinden ilerlemek gerekirse aşağıdaki kod parçası kullanılabilir:
 
 ```python
+from PIL import Image
 baseheight = 560
 img = Image.open(‘fullsized_image.jpg’)
 hpercent = (baseheight / float(img.size[1]))
@@ -35,6 +37,7 @@ img.save(‘resized_image.jpg’)
 Hatta:
 
 ```python
+from PIL import Image
 def resimize(so, de, si):
     basewidth = si
     img = Image.open(so)

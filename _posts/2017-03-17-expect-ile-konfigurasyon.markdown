@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "tcl expect ile huawei konfigürasyonu"
+description: "Özellikle network cihazlarından çeşitli komut çıktılarını almak veya konfigürasyon değişikliği yapmak gerektiğinde expect akla ilk gelen seçeneklerden birisi. Bu yazıda Huawei örneğinden yola çıkarak expect'i tanıttım."
 date:   2017-03-17 12:43:06
 categories: network
 tags:
