@@ -37,28 +37,30 @@ Bir de elimin altında [SIPp][sipp] kullanabileceğim bir cihaz (Kali Linux) var
 
 Çözüm beklediğim kadar kolay olmadı. SIP ALG ve SIP Helper disable edilirse -zaten kullanılması için bir sebep yoktu- hemen çözülür diye düşünmüştüm. Sonuçta sorunu yaratan SIP Helper'dı. İlk önce dur bir deneyeyim diye SIP ALG'nin kapalı olduğu bir voip profile oluşturdum ve ilgili policy'de voip profile olarak bu yeni oluşturduğum profili kullandım. Tabi ki işe yaramadı.
 
->config voip profile
->  edit VoIP_Pro_2
->    config sip
->    set status disable
->  end
+```
+config voip profile
+  edit VoIP_Pro_2
+    config sip
+    set status disable
+  end
+```
 
+Daha sonra [burada][dissip] bahsedildiği şekilde sip helper'ı disable edip sildim (RTP adımına gerek yoktu). Ancak yüzlerce cihazın bağlı olduğu cihazı tabi ki yeniden başlatmadım.
 
-Daha sonra [burada][dissip] bahsedildiği şekilde sip helper'ı disable edip sildim (RTP adımına gerek yoktu). Ancak yüzlerce cihazın bağlı olduğu cihazı tabi ki de yeniden başlatmadım.
+```
+Step One: Disable SIP Helper!
 
->Step One: Disable SIP Helper!
->
->1.config system settings
->2.set  sip-helper disable
->3.set sip-nat-trace disable
->4.REBOOT THE DEVICE!!! (You may want to wait on rebooting until AFTER you do the next few steps!)
->
->Step Two: Delete the SIP Helper
->
->1.config system session-helper
->2.show (Look for the SIP helper, often object 12)
->3.delete # (whatever number the SIP helper was)
+1.config system settings
+2.set  sip-helper disable
+3.set sip-nat-trace disable
+4.REBOOT THE DEVICE!!! (You may want to wait on rebooting until AFTER you do the next few steps!)
 
+Step Two: Delete the SIP Helper
+
+1.config system session-helper
+2.show (Look for the SIP helper, often object 12)
+3.delete # (whatever number the SIP helper was)
+```
 En son baktım olmuyor...
 
 ```
