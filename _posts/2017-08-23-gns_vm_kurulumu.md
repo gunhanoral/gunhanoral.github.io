@@ -5,7 +5,7 @@ description: "GNS3 VM kurarken dikkat edilecek bazı hususlar. Ben uğraştım, 
 date:   2017-08-23 19:33:32
 categories: network
 tags: ['gns3', 'gns3 vm', 'VirtualBox']
-image: 
+image: assets/article_images/2017-08-23-gns3-vm-kurulumu/gns3.png
 published: true
 ---
 
