@@ -13,11 +13,11 @@ Windows 10 üzerine GNS3 kurarken bazı dertler, çileler çektim. Biraz kendime
 
 # GNS3 
 
-Bildiğiniz üzere GNS3 network cihazlarında kullanılan işletim sistemlerini bilgisayarınızda çalıştırabileceğiniz bir uygulama. Özellikle eğitim amaçlı ve test amaçlı çokça kullanılıyor. CCNA, CCNP konuları için GNS3'te çalışmak standart olmuştur diyebilirim. Bilgisayar özellikleriniz yettiğince ufak bir topoloji oluşturup bu cihazları birbirine bağlayabilir, network üzerinde OSPF, EIGRP, BGPhatta at koşturabilirsiniz. Wireshark ile bu mesajlaşmaları inceleyebilir, bu topoloji üzerinden internete çıkabilirsiniz. Epey kullanışlı ve öğretici bir program. 
+Bildiğiniz üzere GNS3 network cihazlarında kullanılan işletim sistemlerini bilgisayarınızda çalıştırabileceğiniz bir uygulama. Özellikle eğitim amaçlı ve test amaçlı çokça kullanılıyor. CCNA, CCNP konuları için GNS3'te çalışmak standart olmuştur diyebilirim. Bilgisayar özellikleriniz yettiğince ufak bir topoloji oluşturup bu cihazları birbirine bağlayabilir, network üzerinde OSPF, EIGRP, BGP hatta at koşturabilirsiniz. Wireshark ile bu mesajlaşmaları inceleyebilir, bu topoloji üzerinden internete çıkabilirsiniz. Epey kullanışlı ve öğretici bir program. 
 
 ## GNS3 indirme ve yükleme
 
-GNS3 kullanmak eskiden daha bir kolaydı sanki. Standart bir kurulum yapar, ardından import ettiğimiz ios'ları çalıştırır, cihazlara bağlanıp konfigürasyona başlardık. Artık kurulumu birazcık daha değişmiş, bir nebze zorlaşmış. Gelin ilk önce GNS3'ün kendi sitesinden GNS3'ü indirelim. İlgili adresteki download butonuna tıkladıktan sonra platformunuza uygun sürümü seçerek indirmeye başlayın. Sanırım üyelik istiyordu, üye olmanızda bir sakınca yok. Sitede birçok konu hakkında bilgi mevcut. 
+GNS3 kullanmak eskiden daha bir kolaydı sanki. Standart bir kurulum yapar, ardından import ettiğimiz ios'ları çalıştırır, cihazlara bağlanıp konfigürasyona başlardık. Artık kurulumu birazcık daha değişmiş, bir nebze zorlaşmış. Gelin ilk önce [GNS3'ün kendi sitesinden](https://www.gns3.com/software/download) GNS3'ü indirelim. İlgili adresteki download butonuna tıkladıktan sonra platformunuza uygun sürümü seçerek indirmeye başlayın. Sanırım üyelik istiyordu, üye olmanızda bir sakınca yok. Sitede birçok konu hakkında bilgi mevcut. 
 
 Sonrası aslında gayet kolay bir kurulum. Next tuşlarına ardı ardına basmanız yeterli olacaktır. Ben Solarwinds gibi ekstra programları yüklemedim. Winpcap'in son sürümü bilgisayarımda halihazırda vardı ancak yine de aynı sürümü yüklemek gerekebiliyormuş, haberiniz olsun. 
 
@@ -27,9 +27,9 @@ GNS3 kurulduktan sonra çabucak bir test yapalım. Yeni bir proje oluşturup ad�
 
 ## GNS3 VM
 
-GNS3 VM gerek güvenlik gerek de hız açısından standart GNS3'e göre avantajlara sahip. Bu avantajları kullanabilmek için bir sanal makine yöneticisine, bir de GNS3 VM imajına sahip olmanız gerekmekte. Vmware Workstation ve Oracle VirtualBox sanal makine yönetimi için iki çözüm. Hangisi ile çalışacağımızı seçtikten sonra GNS3 VM'in ilgili versiyonunu sitesinden indirebiliriz. Ben, kendi bilgisayarımda VirtualBox ile kurulum yaptığım için bu kurulumu anlatacağım.
+GNS3 VM gerek güvenlik gerek de hız açısından standart GNS3'e göre avantajlara sahip. Bu avantajları kullanabilmek için bir sanal makine yöneticisine, bir de GNS3 VM imajına sahip olmanız gerekmekte. Vmware Workstation ve Oracle VirtualBox sanal makine yönetimi için iki çözüm. Hangisi ile çalışacağımızı seçtikten sonra GNS3 VM'in ilgili versiyonunu [sitesinden](https://www.gns3.com/software/download-vm) indirebiliriz. Ben, kendi bilgisayarımda VirtualBox ile kurulum yaptığım için bu kurulumu anlatacağım.
 
-İlk önce sitesinden VirtualBox'ın son sürümünü indirelim. Dosya inerken ben de size yaşadığım sorunu anlatayım:
+İlk önce sitesinden VirtualBox'ın [son sürümünü](https://www.virtualbox.org/wiki/Downloads) indirelim. Dosya inerken ben de size yaşadığım sorunu anlatayım:
 
 ### Kurulum öncesi bir ek bilgi
 
@@ -58,4 +58,12 @@ Aynı preference menusunde GNS3 VM -> Enable GNS3 VM seçildikten sonra Virtuali
 
 ### Test
 
-Bu noktada bir test daha yapmakta fayda var. Virtual PC eklediğimizde DHCP hatası alıyorsak üstteki adımları inceleyerek sorunu gidermeyi deneyebiliriz. Eğer hata almıyorsak yine iki üç PC'yi bir Hub ile bağlayaıp birbirine eriştirmeyi denemeliyiz. Eğer çalışıyorsa kutlarım, başarılı bir kurulum sağlamışsınız demektir. 
+Bu noktada bir test daha yapmakta fayda var. Virtual PC eklediğimizde DHCP hatası alıyorsak üstteki adımları inceleyerek sorunu gidermeyi deneyebiliriz. Eğer hata almıyorsak yine iki üç PC'yi bir Hub ile bağlayaıp birbirine eriştirmeyi denemeliyiz. Eğer çalışıyorsa kutlarım, başarılı bir kurulum sağlamışsınız demektir. GNS3'ü kapatabilirsiniz.
+
+## Appliance
+
+Gelin birlikte bir appliance indirip yükleyelim. [GNS3 Marketplace](https://www.gns3.com/marketplace)'den [Network Automation](https://www.gns3.com/marketplace/appliance/network-automation) appliance'ını indirelim. Birkaç kb'lık bir dosya inecek. Çift tıkladığınızda GNS3'ü başlayacak. Birkaç adımlık bir kurulumdan sonra sol menüde Network Automation appliance'ını bulabilirsiniz. Appliance'ı projenize sürükleyip bıraktığınızda gerekli dosyaları indirip kuracaktır. Bu işlem biraz sürebilir. Ama sonrasına appliance'ı başlatıp cihaza console olabileceksiniz. 
+
+# Sonuç
+
+Şimdilik bu kadar. Hazır Network Automation'ı indirmişken Ansible'ı birazcık kurcalamanızı öneririm. 
