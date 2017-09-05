@@ -3,6 +3,9 @@ gems:
   - jemoji
   - jekyll-paginate
 
+include:
+  - _pages
+
 # Site settings
 title: "Günhan Oral"
 description: > # this means to ignore newlines until "email:"
