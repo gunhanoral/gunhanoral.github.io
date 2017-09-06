@@ -52,8 +52,8 @@
           </div>
           <a name="topofpage"></a>
           {{content}}
+          {% include page__taxonomy.html %}
         </section>
-        {% include page__taxonomy.html %}
         <footer class="post-footer">
           <section class="share">
             {% for social in site.social %}
