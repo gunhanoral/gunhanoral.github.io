@@ -26,6 +26,13 @@ author_image: "/assets/images/author.jpg"
 paginate:	5
 #highlighter: rouge
 
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
 url: "http://gunhanoral.github.io" # the base hostname & protocol for your site
 baseurl: ""
 #used to display twitter cards
