@@ -1,0 +1,19 @@
+---
+layout: page
+title: Notebooks
+description: Jupyter Notebooks by Günhan Oral
+permalink: /notebooks/
+---
+<section class="listing">
+  <ul>
+    {% for page in site.pages %}
+      {% if page.tags contains 'notebook' and page.title and page.description %}
+        <li>
+          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
+            {{ page.title }}
+          </a> - {{ page.description }}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
