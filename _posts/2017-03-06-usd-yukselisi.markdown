@@ -5,7 +5,6 @@ description: "Bir süredir doların durmak bilmeyen yükselişi bende bu trendin
 date:   2017-03-06 14:34:25
 categories: python
 tags:
-  - featured
   - python
   - bokeh
   - usd
