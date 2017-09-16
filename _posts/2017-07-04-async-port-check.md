@@ -68,27 +68,3 @@ Total time:  21.0092453956604
 ```
 
 A quick note: If you run this script on a Windows machine for lots of destination address, you'll most likely get a ValueError like this. "ValueError: too many file descriptors in select()" Since I have a Linux machine, I didn't bother searching a solution.
-
-Update: The solution for this problem is using `asyncio.Semaphore`. It limits the maximum concurrent connection. [Source](https://pawelmhm.github.io/asyncio/python/aiohttp/2016/04/22/asyncio-aiohttp.html).
-
-``` python
-async def check_port(ip, port, loop):
-	try:
-		reader, writer = await asyncio.open_connection(ip, port, loop=loop)
-		print(ip, port, 'ok')
-		writer.close()
-		return (ip, port, True)
-	except:
-		print(ip, port, 'nok')
-		return (ip, port, False)
-
-async def check_port_sem(sem, ip, port, loop):
-	async with sem:
-		return await check_port(ip, port, loop)
-
-async def run(dests, ports, loop):
-	sem = asyncio.Semaphore(400) #Change this value for limitation
-	tasks = [asyncio.ensure_future(check_port_sem(sem, d, p, loop)) for d in dests for p in ports]
-	responses = await asyncio.gather(*tasks)
-	return responses
-```
