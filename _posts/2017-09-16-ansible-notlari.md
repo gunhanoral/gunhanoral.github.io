@@ -4,7 +4,7 @@ title:  "Ansible Notları"
 description: "Birkaç gün önce test amaçlı Ansible kurulumu yaptım ve çeşitli denemeler yapmaya başladım. Deneyimlerim ile ilgili notları burada tutuyorum."
 date:   2017-09-16 17:42:38
 categories: network
-tags: ['network', 'python', 'ansible', 'network automation', 'network orchestration']
+tags: ['network', 'python', 'ansible', 'network automation', 'network orchestration', 'featured']
 image: /assets/article_images/2017-09-16-ansible-notlari.md
 published: true
 ---
