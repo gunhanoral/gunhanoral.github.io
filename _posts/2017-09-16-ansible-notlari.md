@@ -116,11 +116,11 @@ Ansible'ın parladığı nokta playbookları. Ad-hoc yapılamayacak kompleks iş
   - debug: msg="{{ clock.stdout }}"
 ```
 
-* hosts: envanter dosyamdaki cisco901 grubundaki 11'den 15'e kadarki elemanları seçiyorum ve bu cihazlara bağlanıyorum.
-* gather_facts: Normalde Ansible ilk bağlandığında setup modülünü çalıştırıp çeşitli fact'ler elde ediyor. Buna gerek olmadığı için boşuna çalıştırmıyoruz.
-* connection: "show clock" komutunu çalıştırmak için ios_command modülünü kullanacağız. Bu modülün gereksinimlerinden birisi connection'ın local olması, diğeri de provider değişkeninin kullanılması. Bu sayede provider değişkenlerindeki değerlerle bağlantı sağlanıyor.
-* vars_prompt: Provider içine atılacak kullanıcı adı ve şifre kısımlarının kullanıcıya sorulması sağlanıyor.
-* tasks: Bu kısım karşı uçlarda yapılacak işlemleri tanımladığımız kısım. 3 tasks var, ilk ikisine isim verilmiş, üçüncüsü isimsiz kalmış.
-  1. SYS \| Define provider: set_fact modülü yardımıyla provider'ın içi dolduruluyor: host, username, password
-  1. IOS \| Show clock: ios_command modülünü kullanıyoruz. Provider özellikleri belirtilip "show clock" komutu gönderiliyor. Komutun çıktısı clock isimli değişkene *register* ediliyor.
-  1. debug modülü ile clock değişkeni ekrana yazdırılıyor.
+* **hosts:** envanter dosyamdaki cisco901 grubundaki 11'den 15'e kadarki elemanları seçiyorum ve bu cihazlara bağlanıyorum.
+* **gather_facts:** Normalde Ansible ilk bağlandığında setup modülünü çalıştırıp çeşitli fact'ler elde ediyor. Buna gerek olmadığı için boşuna çalıştırmıyoruz.
+* **connection:** "show clock" komutunu çalıştırmak için ios_command modülünü kullanacağız. Bu modülün gereksinimlerinden birisi connection'ın local olması, diğeri de provider değişkeninin kullanılması. Bu sayede provider değişkenlerindeki değerlerle bağlantı sağlanıyor.
+* **vars_prompt:** Provider içine atılacak kullanıcı adı ve şifre kısımlarının kullanıcıya sorulması sağlanıyor.
+* **tasks:** Bu kısım karşı uçlarda yapılacak işlemleri tanımladığımız kısım. 3 tasks var, ilk ikisine isim verilmiş, üçüncüsü isimsiz kalmış.
+  1. **SYS \| Define provider:** set_fact modülü yardımıyla provider'ın içi dolduruluyor: host, username, password
+  1. **IOS \| Show clock:** ios_command modülünü kullanıyoruz. Provider özellikleri belirtilip "show clock" komutu gönderiliyor. Komutun çıktısı clock isimli değişkene *register* ediliyor.
+  1. **debug** modülü ile clock değişkeni ekrana yazdırılıyor.
