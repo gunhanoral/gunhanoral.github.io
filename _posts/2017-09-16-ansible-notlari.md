@@ -3,7 +3,7 @@ layout: post
 title:  "Ansible Notları"
 description: "Birkaç gün önce test amaçlı Ansible kurulumu yaptım ve çeşitli denemeler yapmaya başladım. Deneyimlerim ile ilgili notları burada tutuyorum."
 date:   2017-09-16 17:42:38
-categories: python
+categories: network
 tags: ['network', 'python', 'ansible', 'network automation', 'network orchestration']
 image: /assets/article_images/2017-09-16-ansible-notlari.md
 published: true
@@ -84,7 +84,7 @@ Ansible'ın parladığı nokta playbookları. Ad-hoc yapılamayacak kompleks iş
 
 İlk yazdığım playbooklardan birisine göz atalım:
 
-``` yaml
+```
 ---
 - hosts: cisco901[11:15]
   gather_facts: no
