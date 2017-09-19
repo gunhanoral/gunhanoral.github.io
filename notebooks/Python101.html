@@ -14584,14 +14584,14 @@ h1:before,h2:before{content:&#39;&#39;}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">klasör</span> <span class="o">=</span> <span class="s1">r&#39;C:\Users\gunha\OneDrive\Documents\Python Scripts\configs&#39;</span>
 <span class="k">for</span> <span class="n">dosya</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">klasör</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">klasör</span><span class="p">,</span><span class="n">dosya</span><span class="p">))</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">satır</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
-            <span class="k">if</span> <span class="s2">&quot;hostname&quot;</span> <span class="ow">in</span> <span class="n">satır</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">satır</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;hostname&quot;</span><span class="p">):</span>
                 <span class="nb">print</span><span class="p">(</span><span class="n">satır</span><span class="p">)</span>
 </pre></div>
 
@@ -14607,143 +14607,13 @@ h1:before,h2:before{content:&#39;&#39;}
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>hostname 34gayrettepe_tnrtr02
 
- terminate-from hostname TurkNetLoadBalance
-
 hostname 34gayrettepe_tnrtr01
 
 hostname 34gayrettepe_colsw02
 
 hostname 34gyr_routesrvrtr01
 
- terminate-from hostname TIB-LAC
-
 hostname 21dyrbakir_oyalns01
-
- terminate-from hostname adiyaman-1
-
- terminate-from hostname batman-1
-
- terminate-from hostname diyarbakir-alc-2
-
- terminate-from hostname DIYARBAKIR-NEC-1
-
- terminate-from hostname ELAZIG-ALC-1
-
- terminate-from hostname mardin-1
-
- terminate-from hostname TT-02-ADIYAMAN-ERC-SE-01_01
-
- terminate-from hostname TT-02-ADIYAMAN-ERC-SE-01_02
-
- terminate-from hostname TT-02-ADIYAMAN-ERC-SE-01_03
-
- terminate-from hostname TT-02-ADIYAMAN-ERC-SE-01_04
-
- terminate-from hostname TT-21-DICLEKENT-ERC-SE-01_SDSL_01
-
- terminate-from hostname TT-21-DICLEKENT-ERC-SE-01_SDSL_02
-
- terminate-from hostname TT-21-DICLEKENT-ERC-SE-01_SDSL_03
-
- terminate-from hostname TT-21-DICLEKENT-ERC-SE-01_SDSL_04
-
- terminate-from hostname TT-21-DIYARBAKIR-ERC-SE-02_01
-
- terminate-from hostname TT-21-DIYARBAKIR-ERC-SE-02_02
-
- terminate-from hostname TT-21-DIYARBAKIR-ERC-SE-02_03
-
- terminate-from hostname TT-21-DIYARBAKIR-ERC-SE-02_04
-
- terminate-from hostname TT-21-DIYARBAKIR-ERC-SE-04_01
-
- terminate-from hostname TT-21-DIYARBAKIR-ERC-SE-04_02
-
- terminate-from hostname TT-21-DIYARBAKIR-ERC-SE-04_03
-
- terminate-from hostname TT-21-DIYARBAKIR-ERC-SE-04_04
-
- terminate-from hostname TT-21-DIYARBAKIR-ERC-SE-07_01
-
- terminate-from hostname TT-21-DIYARBAKIR-ERC-SE-07_02
-
- terminate-from hostname TT-21-DIYARBAKIR-ERC-SE-07_03
-
- terminate-from hostname TT-21-DIYARBAKIR-ERC-SE-07_04
-
- terminate-from hostname TT-23-ELAZIG-ERC-SE-01_01
-
- terminate-from hostname TT-23-ELAZIG-ERC-SE-01_02
-
- terminate-from hostname TT-23-ELAZIG-ERC-SE-01_03
-
- terminate-from hostname TT-23-ELAZIG-ERC-SE-01_04
-
- terminate-from hostname TT-47-MARDIN-ERC-SE-01_01
-
- terminate-from hostname TT-47-MARDIN-ERC-SE-01_02
-
- terminate-from hostname TT-47-MARDIN-ERC-SE-01_03
-
- terminate-from hostname TT-47-MARDIN-ERC-SE-01_04
-
- terminate-from hostname TT-47-YENISEHIR-ERC-SE-01_sdsl_01
-
- terminate-from hostname TT-47-YENISEHIR-ERC-SE-01_sdsl_02
-
- terminate-from hostname TT-47-YENISEHIR-ERC-SE-01_sdsl_03
-
- terminate-from hostname TT-47-YENISEHIR-ERC-SE-01_sdsl_04
-
- terminate-from hostname TT-63-SANLIURFA-ERC-SE-01_01
-
- terminate-from hostname TT-63-SANLIURFA-ERC-SE-01_02
-
- terminate-from hostname TT-63-SANLIURFA-ERC-SE-01_03
-
- terminate-from hostname TT-63-SANLIURFA-ERC-SE-01_04
-
- terminate-from hostname TT-72-BATMAN-ERC-SE-01_01
-
- terminate-from hostname TT-72-BATMAN-ERC-SE-01_02
-
- terminate-from hostname TT-72-BATMAN-ERC-SE-01_03
-
- terminate-from hostname TT-72-BATMAN-ERC-SE-01_04
-
- terminate-from hostname TT-73-SIRNAK-ERC-SE-01_01
-
- terminate-from hostname TT-73-SIRNAK-ERC-SE-01_02
-
- terminate-from hostname TT-73-SIRNAK-ERC-SE-01_03
-
- terminate-from hostname TT-73-SIRNAK-ERC-SE-01_04
-
- terminate-from hostname SANLIURFA-ALC-1
-
- terminate-from hostname sirnak-1
-
- terminate-from hostname TIB
-
- terminate-from hostname TT-21-DICLEKENT-ERC-SE-01_01
-
- terminate-from hostname TT-21-DICLEKENT-ERC-SE-01_02
-
- terminate-from hostname TT-21-DICLEKENT-ERC-SE-01_03
-
- terminate-from hostname TT-21-DICLEKENT-ERC-SE-01_04
-
- terminate-from hostname TT-47-YENISEHIR-ERC-SE-01_01
-
- terminate-from hostname TT-47-YENISEHIR-ERC-SE-01_02
-
- terminate-from hostname TT-47-YENISEHIR-ERC-SE-01_03
-
- terminate-from hostname TT-47-YENISEHIR-ERC-SE-01_04
-
- terminate-from hostname TurkNetLoadBalance
-
- terminate-from hostname diyarbakir-hua-1
 
 hostname 21dyrbakir_oyasw01
 
