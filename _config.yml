@@ -39,7 +39,7 @@ baseurl: ""
 twitter_handle: '@_gunhanoral'
 
 #fill in disqus shortname to use disqus
-#disqus: disqus-shortname
+disqus: gunhanoral
 
 google_analytics: UA-93027736-1
 
