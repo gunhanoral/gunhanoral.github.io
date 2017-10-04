@@ -1,0 +1,308 @@
+---
+layout: notebook
+title:  "Esra's Homework"
+description: "Esra okulda kendisine verilen ödevleri yapmayıp bana yaptırıyor. : ("
+date:   2017-10-04 13:34:09
+categories: python
+tags:
+  - python
+  - notebook
+published: true
+---
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[126]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">problem1</span><span class="p">():</span>
+    <span class="n">ages</span> <span class="o">=</span> <span class="p">{</span>
+         <span class="mi">1</span><span class="p">:</span>  <span class="s2">&quot;Under 18&quot;</span><span class="p">,</span>
+        <span class="mi">18</span><span class="p">:</span>  <span class="s2">&quot;18-24&quot;</span><span class="p">,</span>
+        <span class="mi">25</span><span class="p">:</span>  <span class="s2">&quot;25-34&quot;</span><span class="p">,</span>
+        <span class="mi">35</span><span class="p">:</span>  <span class="s2">&quot;35-44&quot;</span><span class="p">,</span>
+        <span class="mi">45</span><span class="p">:</span>  <span class="s2">&quot;45-49&quot;</span><span class="p">,</span>
+        <span class="mi">50</span><span class="p">:</span>  <span class="s2">&quot;50-55&quot;</span><span class="p">,</span>
+        <span class="mi">56</span><span class="p">:</span>  <span class="s2">&quot;56+&quot;</span>
+    <span class="p">}</span>
+    <span class="n">occupation</span> <span class="o">=</span> <span class="p">{</span>
+         <span class="mi">0</span><span class="p">:</span>  <span class="s2">&quot;other&quot;</span><span class="p">,</span>
+         <span class="mi">1</span><span class="p">:</span>  <span class="s2">&quot;academic/educator&quot;</span><span class="p">,</span>
+         <span class="mi">2</span><span class="p">:</span>  <span class="s2">&quot;artist&quot;</span><span class="p">,</span>
+         <span class="mi">3</span><span class="p">:</span>  <span class="s2">&quot;clerical/admin&quot;</span><span class="p">,</span>
+         <span class="mi">4</span><span class="p">:</span>  <span class="s2">&quot;college/grad student&quot;</span><span class="p">,</span>
+         <span class="mi">5</span><span class="p">:</span>  <span class="s2">&quot;customer service&quot;</span><span class="p">,</span>
+         <span class="mi">6</span><span class="p">:</span>  <span class="s2">&quot;doctor/health care&quot;</span><span class="p">,</span>
+         <span class="mi">7</span><span class="p">:</span>  <span class="s2">&quot;executive/managerial&quot;</span><span class="p">,</span>
+         <span class="mi">8</span><span class="p">:</span>  <span class="s2">&quot;farmer&quot;</span><span class="p">,</span>
+         <span class="mi">9</span><span class="p">:</span>  <span class="s2">&quot;homemaker&quot;</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span>  <span class="s2">&quot;K-12 student&quot;</span><span class="p">,</span>
+        <span class="mi">11</span><span class="p">:</span>  <span class="s2">&quot;lawyer&quot;</span><span class="p">,</span>
+        <span class="mi">12</span><span class="p">:</span>  <span class="s2">&quot;programmer&quot;</span><span class="p">,</span>
+        <span class="mi">13</span><span class="p">:</span>  <span class="s2">&quot;retired&quot;</span><span class="p">,</span>
+        <span class="mi">14</span><span class="p">:</span>  <span class="s2">&quot;sales/marketing&quot;</span><span class="p">,</span>
+        <span class="mi">15</span><span class="p">:</span>  <span class="s2">&quot;scientist&quot;</span><span class="p">,</span>
+        <span class="mi">16</span><span class="p">:</span>  <span class="s2">&quot;self-employed&quot;</span><span class="p">,</span>
+        <span class="mi">17</span><span class="p">:</span>  <span class="s2">&quot;technician/engineer&quot;</span><span class="p">,</span>
+        <span class="mi">18</span><span class="p">:</span>  <span class="s2">&quot;tradesman/craftsman&quot;</span><span class="p">,</span>
+        <span class="mi">19</span><span class="p">:</span>  <span class="s2">&quot;unemployed&quot;</span><span class="p">,</span>
+        <span class="mi">20</span><span class="p">:</span>  <span class="s2">&quot;writer&quot;</span>
+    <span class="p">}</span>
+    
+    <span class="k">def</span> <span class="nf">readfiles</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">enc</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">enc</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+    
+    <span class="n">movies</span> <span class="o">=</span> <span class="n">readfiles</span><span class="p">(</span><span class="s1">&#39;data/eodev/movies.dat&#39;</span><span class="p">,</span> <span class="n">enc</span><span class="o">=</span><span class="s1">&#39;iso-8859-15&#39;</span><span class="p">)</span>
+    <span class="n">ratings</span> <span class="o">=</span> <span class="n">readfiles</span><span class="p">(</span><span class="s1">&#39;data/eodev/ratings.dat&#39;</span><span class="p">)</span>
+    <span class="n">users</span> <span class="o">=</span> <span class="n">readfiles</span><span class="p">(</span><span class="s1">&#39;data/eodev/users.dat&#39;</span><span class="p">)</span>
+    
+    <span class="n">moviesd</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">movies</span><span class="p">:</span>
+        <span class="n">moviesd</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]:</span> <span class="p">{</span>
+            <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> 
+            <span class="s1">&#39;genres&#39;</span><span class="p">:</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="p">}})</span>
+
+    <span class="n">usersd</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
+        <span class="n">usersd</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]:</span> <span class="p">{</span>
+            <span class="s1">&#39;gender&#39;</span><span class="p">:</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> 
+            <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="n">ages</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">])],</span>
+            <span class="s1">&#39;occupation&#39;</span><span class="p">:</span> <span class="n">occupation</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)[</span><span class="mi">3</span><span class="p">])],</span>
+            <span class="s1">&#39;zip&#39;</span><span class="p">:</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)[</span><span class="mi">4</span><span class="p">]</span>
+
+        <span class="p">}})</span>
+    
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/eodev/merged.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">ratings</span><span class="p">:</span>
+            <span class="n">user_id</span><span class="p">,</span> <span class="n">movie_id</span><span class="p">,</span> <span class="n">rating</span><span class="p">,</span> <span class="n">timestamp</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;::&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">user_id</span><span class="p">,</span> 
+                  <span class="n">movie_id</span><span class="p">,</span> 
+                  <span class="n">rating</span><span class="p">,</span> 
+                  <span class="n">timestamp</span><span class="p">,</span> 
+                  <span class="n">usersd</span><span class="p">[</span><span class="n">user_id</span><span class="p">][</span><span class="s1">&#39;gender&#39;</span><span class="p">],</span> 
+                  <span class="n">usersd</span><span class="p">[</span><span class="n">user_id</span><span class="p">][</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> 
+                  <span class="n">usersd</span><span class="p">[</span><span class="n">user_id</span><span class="p">][</span><span class="s1">&#39;occupation&#39;</span><span class="p">],</span> 
+                  <span class="n">usersd</span><span class="p">[</span><span class="n">user_id</span><span class="p">][</span><span class="s1">&#39;zip&#39;</span><span class="p">],</span> 
+                  <span class="n">moviesd</span><span class="p">[</span><span class="n">movie_id</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">],</span> 
+                  <span class="n">moviesd</span><span class="p">[</span><span class="n">movie_id</span><span class="p">][</span><span class="s1">&#39;genres&#39;</span><span class="p">]])</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">problem1</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[189]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
+<span class="k">def</span> <span class="nf">problem2</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;iso-8859-15&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">years</span> <span class="o">=</span> <span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;\((\d+)\)&#39;</span><span class="p">,</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">Counter</span><span class="p">(</span><span class="n">years</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">problem2</span><span class="p">(</span><span class="s1">&#39;data/eodev/movies.dat&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[189]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(&#39;1996&#39;, 345)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[190]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">problem3</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;iso-8859-15&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">years</span> <span class="o">=</span> <span class="p">(</span><span class="n">genre</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span> <span class="k">for</span> <span class="n">genre</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; Genre Type&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{:&gt;11}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Occurence&#39;</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">genre</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">Counter</span><span class="p">(</span><span class="n">years</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:&gt;11}</span><span class="s1"> </span><span class="si">{:&gt;11}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">genre</span><span class="p">,</span> <span class="n">count</span><span class="p">))</span> 
+
+<span class="n">problem3</span><span class="p">(</span><span class="s1">&#39;data/eodev/movies.dat&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> Genre Type   Occurence
+      Drama        1603
+     Comedy        1200
+     Action         503
+   Thriller         492
+    Romance         471
+     Horror         343
+  Adventure         283
+     Sci-Fi         276
+ Children&#39;s         251
+      Crime         211
+        War         143
+Documentary         127
+    Musical         114
+    Mystery         106
+  Animation         105
+    Fantasy          68
+    Western          68
+  Film-Noir          44
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[192]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">operator</span> <span class="k">import</span> <span class="n">itemgetter</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="k">import</span> <span class="n">groupby</span>
+<span class="k">def</span> <span class="nf">problem4</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:&gt;11}</span><span class="s1"> </span><span class="si">{:&gt;11}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;AgeRange&#39;</span><span class="p">,</span> <span class="s1">&#39;RatingC&#39;</span><span class="p">))</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">groupby</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(((</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">)),</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">0</span><span class="p">)):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:&gt;11}</span><span class="s1"> </span><span class="si">{:&gt;11}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="nb">len</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">i</span> <span class="ow">in</span> <span class="n">v</span><span class="p">])))</span>
+<span class="n">problem4</span><span class="p">(</span><span class="s1">&#39;data/eodev/merged.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>   AgeRange     RatingC
+      18-24      183536
+      25-34      395556
+      35-44      199003
+      45-49       83633
+      50-55       72490
+        56+       38780
+   Under 18       27211
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[193]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">problem5</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:&gt;11}</span><span class="s1"> </span><span class="si">{:&gt;11}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Genre&#39;</span><span class="p">,</span> <span class="s1">&#39;RatingC&#39;</span><span class="p">))</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">groupby</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(((</span><span class="n">genre</span><span class="p">,</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span>\
+                                   <span class="k">for</span> <span class="n">genre</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;::&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">))),</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">0</span><span class="p">)):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:&gt;11}</span><span class="s1"> </span><span class="si">{:&gt;11}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="nb">len</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">i</span> <span class="ow">in</span> <span class="n">v</span><span class="p">])))</span>
+<span class="n">problem5</span><span class="p">(</span><span class="s1">&#39;data/eodev/merged.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>      Genre     RatingC
+     Action      257457
+  Adventure      133953
+  Animation       43293
+ Children&#39;s       72186
+     Comedy      356580
+      Crime       79541
+Documentary        7910
+      Drama      354529
+    Fantasy       36301
+  Film-Noir       18261
+     Horror       76386
+    Musical       41533
+    Mystery       40178
+    Romance      147523
+     Sci-Fi      157294
+   Thriller      189680
+        War       68527
+    Western       20683
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+ 
+
