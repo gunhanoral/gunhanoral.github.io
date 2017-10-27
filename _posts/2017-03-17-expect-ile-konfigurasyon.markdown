@@ -7,7 +7,7 @@ categories: network
 tags:
   - tcl
   - expect
-  - Huawei
+  - huawei
   - config
 image: /assets/article_images/2017-03-17-expect-ile-konfigurasyon/cables_l.jpg
 image2: /assets/article_images/2017-03-17-expect-ile-konfigurasyon/cables_m.jpg

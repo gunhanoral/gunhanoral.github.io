@@ -3,14 +3,14 @@ layout: post
 title:  "Fortigate ve SIP güvenliği"
 description: "Fortigate 5.2.x sürümü ve sonrasında SIP Helper default olarak aktif hale getirildi. Bu değişiklik konudan habersiz bir çok SIP sunucusunu SIP saldırılarına hedef yaptı."
 date:   2017-05-04 23:19:42
-categories: Security
+categories: security
 tags:
-  - Security
-  - SIP
-  - Fortigate
-  - SIP ALG
-  - SIP Helper
-  - SIP Attack
+  - security
+  - sip
+  - fortigate
+  - sip alg
+  - sip helper
+  - sip attack
 image: /assets/article_images/2015-05-04-sip-guvenligi/Phoneslarge.jpg
 published: true
 ---
