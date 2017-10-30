@@ -46,4 +46,35 @@ Hatta Kali Top 10 uygulamalarını yükleyerek nmap dahil bir çok uygulamayı i
 
 `# apt-get install kali-linux-top10`
 
-Ancak yükleyeceğiniz tüm programlar siz shell'den çıkınca Docker kapanacağı için kaybolacaktır. Gerekli programları listeleyip buna uygun bir Docker imajı oluşturmak gerekecek. Hadi bu da başka bir yazının konusu olsun.
+Ancak yükleyeceğiniz tüm programlar siz shell'den çıkınca Docker kapanacağı için kaybolacaktır. Bunun önüne geçmek için container'ı image olarak kaydedebiliriz.
+
+# Docker image'ını kaydetmek
+
+`# exit` ile container shell'inden çıkış yapalım.
+
+`$ sudo docker ps -l` son çalışan container'ı gösterecektir:
+
+```
+CONTAINER ID        IMAGE                         COMMAND             CREATED             STATUS                     PORTS               NAMES
+5b9946c11688        kalilinux/kali-linux-docker   "/bin/bash"         2 days ago          Exited (2) 7 seconds ago                       elegant_varahamihira
+```
+
+Üzerinde halihazırda değişiklik yaptığım container'ın id'si 5b9946c11688'miş. Bunu kalilinux:top10 isim:tag'i ile kaydetmek için `sudo docker commit 5b9946c11688 kalilinux:top10` komutunu kullanıyorum. 
+
+`$ sudo docker images` bana kayıtlı image'ları gösterecektir:
+
+```
+REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
+kalilinux                     top10               777692e2eac0        13 seconds ago      5.28GB
+hello-world                   latest              05a3bd381fc2        6 weeks ago         1.84kB
+kalilinux/kali-linux-docker   latest              8ececeaf404d        8 months ago        1.56GB
+```
+
+Görebileceğiniz üzere yeni oluşturduğumuz image 5GB+ yer kaplıyor. Bu container'a bağlanmak için `$ sudo docker start -i 5b9946c11688` komutunu kullanabiliriz. -i argümanı interactive bağlantı için kullanılıyor, dolayısıyla şu anda kali container'ına bağlanmış ve root@5b9946c11688:/# prompt'unu görüyor olmalıyız.
+
+```
+root@5b9946c11688:/# nmap -V
+Nmap version 7.60 ( https://nmap.org )
+...
+```
+
