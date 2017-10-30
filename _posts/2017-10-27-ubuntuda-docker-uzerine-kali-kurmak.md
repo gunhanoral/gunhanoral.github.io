@@ -70,7 +70,7 @@ hello-world                   latest              05a3bd381fc2        6 weeks ag
 kalilinux/kali-linux-docker   latest              8ececeaf404d        8 months ago        1.56GB
 ```
 
-Görebileceğiniz üzere yeni oluşturduğumuz image 5GB+ yer kaplıyor. Bu container'a bağlanmak için `$ sudo docker start -i 5b9946c11688` komutunu kullanabiliriz. -i argümanı interactive bağlantı için kullanılıyor, dolayısıyla şu anda kali container'ına bağlanmış ve root@5b9946c11688:/# prompt'unu görüyor olmalıyız.
+Görebileceğiniz üzere yeni oluşturduğumuz image 5GB+ yer kaplıyor. Daha önce girdiğimiz container'a bağlanmak için `$ sudo docker start -i 5b9946c11688` komutunu kullanabiliriz. -i argümanı interactive bağlantı için kullanılıyor, dolayısıyla şu anda kali container'ına bağlanmış ve root@5b9946c11688:/# prompt'unu görüyor olmalıyız.
 
 ```
 root@5b9946c11688:/# nmap -V
@@ -78,3 +78,26 @@ Nmap version 7.60 ( https://nmap.org )
 ...
 ```
 
+Ancak yeni oluşturduğumuz image'ı çalıştırmak istiyorsak `docker run` komutunu kullanmalıyız.
+
+```
+$ sudo docker run -i -t kalilinux:top10 /bin/bash
+root@dd98641a7356:/# nmap
+Nmap 7.60 ( https://nmap.org )
+...
+root@dd98641a7356:/# exit
+```
+
+```
+$ sudo docker ps -a
+CONTAINER ID        IMAGE                         COMMAND             CREATED             STATUS                            PORTS               NAMES
+dd98641a7356        kalilinux:top10               "/bin/bash"         16 seconds ago      Exited (255) 5 seconds ago                            peaceful_feynman
+5b9946c11688        kalilinux/kali-linux-docker   "/bin/bash"         2 days ago          Exited (127) About a minute ago                       elegant_varahamihira
+e8811fb35a30        hello-world                   "/hello"            2 days ago          Exited (0) 2 days ago                                 hopeful_fermat
+```
+
+Görülebileceği üzere kalilinux:top10 imajından yeni bir container oluşturup buna bağlanabildik. Ve bağlandığımızda nmap yüklüydü. 
+
+# Sonuç
+
+Sonuç olarak internetten edindiğimiz bir imajın üzerinde geçici ve kalıcı değişiklikler yapabildik. Kalıcı değişiklikleri yeni bir image'da saklayıp istediğimiz zaman bu image'dan yeni bir container oluşturabildik. 
