@@ -24,14 +24,17 @@ import time
 now = time.time()
 
 async def check_port(ip, port, loop):
+        conn = asyncio.open_connection(ip, port, loop=loop)
         try:
-                reader, writer = await asyncio.open_connection(ip, port, loop=loop)
+                reader, writer = await asyncio.wait_for(conn, timeout=3)
                 print(ip, port, 'ok')
-                writer.close()
                 return (ip, port, True)
         except:
                 print(ip, port, 'nok')
                 return (ip, port, False)
+        finally:
+                if 'writer' in locals():
+                        writer.close()
 
 async def run(dests, ports, loop):
         tasks = [asyncio.ensure_future(check_port(d, p, loop)) for d in dests for p in ports]
@@ -73,14 +76,17 @@ Update: The solution for this problem is using `asyncio.Semaphore`. It limits th
 
 ``` python
 async def check_port(ip, port, loop):
+        conn = asyncio.open_connection(ip, port, loop=loop)
         try:
-                reader, writer = await asyncio.open_connection(ip, port, loop=loop)
+                reader, writer = await asyncio.wait_for(conn, timeout=3)
                 print(ip, port, 'ok')
-                writer.close()
                 return (ip, port, True)
         except:
                 print(ip, port, 'nok')
                 return (ip, port, False)
+        finally:
+                if 'writer' in locals():
+                        writer.close()
 
 async def check_port_sem(sem, ip, port, loop):
         async with sem:
