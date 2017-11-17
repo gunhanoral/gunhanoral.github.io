@@ -71,6 +71,6 @@ En son baktım olmuyor...
 
 Umutsuzca son bir kez SIPp'yi çalıştırdım. Amacım log almakken SIPp'nin cevap alamadığını görünce yaptıklarımın _sonunda_ işe yaradığını anladım. Güzel ve uğraştırıcı bir deneyimdi. İnternette benzer bir konu bulmak zor olduğu için paylaşıyorum.  
 
-[handbook]:	[http://docs.fortinet.com/uploaded/files/2813/fortigate-sip-54.pdf]
-[dissip]:	[http://www.pkguild.com/2015/08/how-to-disable-sip-and-rtp-processing-on-your-fortigate-for-voip-goodness/]
-[sipp]:	[http://sipp.sourceforge.net/]
+[handbook]:	http://docs.fortinet.com/uploaded/files/2813/fortigate-sip-54.pdf
+[dissip]:	http://www.pkguild.com/2015/08/how-to-disable-sip-and-rtp-processing-on-your-fortigate-for-voip-goodness/
+[sipp]:	http://sipp.sourceforge.net/
