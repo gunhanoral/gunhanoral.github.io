@@ -27,7 +27,13 @@ Note: İnkalar quipu adı verilen düğümlü yün ipleri arşivlemek için kull
 --
 
 - Sosyal hiyerarşiler, eşitsizlik gibi kavramlar hayali düzenlerdir. Ve bu hayali düzenlerin oluşması tesadüfi olabilir.
-- tesadüfi tarihsel durum -> beyazların siyahileri yönetmesi -> ayrımcı yasalar -> siyahiler arası yaygın fakirlik ve eğitimsizlik -> kültürel önyargılar -> GOTO 3
+- 
+  1. tesadüfi tarihsel durum
+  2. beyazların siyahileri yönetmesi
+  3. ayrımcı yasalar
+  4. siyahiler arası yaygın fakirlik ve eğitimsizlik
+  5. kültürel önyargılar
+  6. GOTO 3
 
 --
 
