@@ -3,9 +3,10 @@
 - 70 bin yıl önce insan kültürleri oluşmaya başladı.
 - Homo Sapiens "bilge adam" anlamına geliyor.
 - Bir çok insan türü 2 milyon yıl önceden 10 bin yıl önceye kadar birlikte yaşadı, muhtemelen bu türleri Homo Sapiens yok etti.
-Note: Avrupa ve batı Asya Homo Neandertalensis, Endonezya Java adası Solo vadisi Homo Soloensis, bir metre boy 25 kilo ile Homo Floresiensis, Doğu Afrika'da Homo rudolfensis, Homo Erectus, Homo Habilis ve diğerleri
 - Vücut büyüklüğümüze göre daha büyük beyinlerimiz var. 200 bin yıldır vardı. Vücut büyüklüğümüzün %2-3'ünü oluşturuyor ama tüm enerjimizin %25'ini harcıyor.
 - Tarım devrimine kadar avcı-toplayıcıydık; fiziksel ve psikolojik özelliklerimiz buna göre şekillendi. Ve bu bize fazlasıyla yetiyordu.
+
+Note: Avrupa ve batı Asya Homo Neandertalensis, Endonezya Java adası Solo vadisi Homo Soloensis, bir metre boy 25 kilo ile Homo Floresiensis, Doğu Afrika'da Homo rudolfensis, Homo Erectus, Homo Habilis ve diğerleri
 
 --
 
