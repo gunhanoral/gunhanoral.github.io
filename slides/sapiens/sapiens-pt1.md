@@ -1,6 +1,8 @@
 ## Hayvanlardan Tanrılara
 # Sapiens
 
+--
+
   - Homo sapiens neden ekolojik bir seri katile dönüştü?
   - Para neden herkesin güvendiği tek şey?
   - Kadınlar üstün sosyal becerilere sahipken, neden çoğu toplum erkek egemen?
@@ -22,6 +24,16 @@
     <img width="300" src="data/sapiens_en.jpg">
     <img width="300" src="data/sapiens_tr.jpg">
 </section>
+
+--
+
+- 13.5 milyar yıl önce Evren
+- 3.8 milyar yıl önce Dünya
+- 2.8 milyon yıl önce Homo Habilis (ve kimi diğerleri)
+- 160 bin yıl önce Homo Sapiens
+- 70 bin yıl önce bilişsel devrim
+- 12 bin yıl önce tarım devrimi
+- 500 yıl önce bilimsel devrim
 
 --
 
