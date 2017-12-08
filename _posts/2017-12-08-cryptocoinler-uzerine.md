@@ -4,7 +4,7 @@ title:  "Cryptocoinler üzerine"
 description: "Son zamanlarda artan crypto konusunda yazmazsam olmazdı"
 date:   2017-12-08 22:37:53
 categories: technology
-tags: ['teknoloji', 'cryptocoins', 'cryptocurrency', 'bitcoin', 'iota', 'ethereum', 'cardano', 'monero', 'siacoin']
+tags: ['teknoloji', 'cryptocoins', 'cryptocurrency', 'bitcoin', 'iota', 'ethereum', 'cardano', 'monero', 'siacoin', 'featured']
 image: assets/article_images/2017-12-08-cryptocoinler-uzerine/Cryptocurrency.png
 published: true
 ---
