@@ -5,7 +5,7 @@ description: "Her zaman Kali'ye ihtiyaç olmuyor ama gerektiğinde de kolayca bu
 date:   2017-10-27 20:08:15
 categories: security
 tags: ['security', 'kali', 'linux', 'docker']
-image: assets/article_images/2017-10-27-ubuntuda-docker-uzerine-kali-kurmak/goddess-kali.jpg
+image: /assets/article_images/2017-10-27-ubuntuda-docker-uzerine-kali-kurmak/goddess-kali.jpg
 published: true
 ---
 # Taşınabilir Kali
@@ -59,7 +59,7 @@ CONTAINER ID        IMAGE                         COMMAND             CREATED   
 5b9946c11688        kalilinux/kali-linux-docker   "/bin/bash"         2 days ago          Exited (2) 7 seconds ago                       elegant_varahamihira
 ```
 
-Üzerinde halihazırda değişiklik yaptığım container'ın id'si 5b9946c11688'miş. Bunu kalilinux:top10 isim:tag'i ile kaydetmek için `sudo docker commit 5b9946c11688 kalilinux:top10` komutunu kullanıyorum. 
+Üzerinde halihazırda değişiklik yaptığım container'ın id'si 5b9946c11688'miş. Bunu kalilinux:top10 isim:tag'i ile kaydetmek için `sudo docker commit 5b9946c11688 kalilinux:top10` komutunu kullanıyorum.
 
 `$ sudo docker images` bana kayıtlı image'ları gösterecektir:
 
@@ -96,8 +96,8 @@ dd98641a7356        kalilinux:top10               "/bin/bash"         16 seconds
 e8811fb35a30        hello-world                   "/hello"            2 days ago          Exited (0) 2 days ago                                 hopeful_fermat
 ```
 
-Görülebileceği üzere kalilinux:top10 imajından yeni bir container oluşturup buna bağlanabildik. Ve bağlandığımızda nmap yüklüydü. 
+Görülebileceği üzere kalilinux:top10 imajından yeni bir container oluşturup buna bağlanabildik. Ve bağlandığımızda nmap yüklüydü.
 
 # Sonuç
 
-Sonuç olarak internetten edindiğimiz bir imajın üzerinde geçici ve kalıcı değişiklikler yapabildik. Kalıcı değişiklikleri yeni bir image'da saklayıp istediğimiz zaman bu image'dan yeni bir container oluşturabildik. 
+Sonuç olarak internetten edindiğimiz bir imajın üzerinde geçici ve kalıcı değişiklikler yapabildik. Kalıcı değişiklikleri yeni bir image'da saklayıp istediğimiz zaman bu image'dan yeni bir container oluşturabildik.
