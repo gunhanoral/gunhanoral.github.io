@@ -32,9 +32,6 @@ async def check_port(ip, port, loop):
         except:
                 print(ip, port, 'nok')
                 return (ip, port, False)
-        finally:
-                if 'writer' in locals():
-                        writer.close()
 
 async def run(dests, ports, loop):
         tasks = [asyncio.ensure_future(check_port(d, p, loop)) for d in dests for p in ports]
@@ -84,9 +81,6 @@ async def check_port(ip, port, loop):
         except:
                 print(ip, port, 'nok')
                 return (ip, port, False)
-        finally:
-                if 'writer' in locals():
-                        writer.close()
 
 async def check_port_sem(sem, ip, port, loop):
         async with sem:
