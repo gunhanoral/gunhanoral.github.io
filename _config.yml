@@ -75,10 +75,10 @@ social:
 
 pages:
   - name:       Notebooks
-    url:        {{ "/notebooks/" | prepend: site.baseurl }}
+    url:        "{{ '/notebooks/' | prepend: site.baseurl }}"
 
   - name:       Slides
-    url:        {{ "/slides/" | prepend: site.baseurl }}
+    url:        "{{ '/slides/' | prepend: site.baseurl }}"
 
   - name:       About
-    url:        {{ "/about/" | prepend: site.baseurl }}
+    url:        "{{ '/about/' | prepend: site.baseurl }}"
