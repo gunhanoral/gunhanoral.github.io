@@ -72,3 +72,13 @@ social:
     share_url: https://www.linkedin.com/shareArticle
     share_title: ?title=
     share_link: "&amp;url="
+
+pages:
+  - name:       Notebooks
+    url:        {{ "/notebooks/" | prepend: site.baseurl }}
+
+  - name:       Slides
+    url:        {{ "/slides/" | prepend: site.baseurl }}
+
+  - name:       About
+    url:        {{ "/about/" | prepend: site.baseurl }}

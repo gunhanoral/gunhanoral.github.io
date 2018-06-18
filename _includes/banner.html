@@ -11,6 +11,14 @@
     <h1 class="blog-title">{{ site.title }}</h1>
     <h2 class="blog-description">{{ site.description }}</h2>
     <div class="custom-links">
+      {% for page in site.pages %}
+        {% if page.url %}
+	    <a href={{ page.url }}>{{ page.name }}</a>
+	    &nbsp;&nbsp;·&nbsp;&nbsp;
+	{% endif %}
+      {% endfor %}
+    </div>
+    <div class="custom-links">
       {% for social in site.social %}
         {% if social.url %}
             <a class="icon-{{ social.icon }}" href="{{ social.url }}" {% if social.desc %} title="{{ social.desc }}"{% endif %}>
