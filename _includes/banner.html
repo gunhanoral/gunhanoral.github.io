@@ -14,7 +14,7 @@
       &nbsp;&nbsp;·&nbsp;&nbsp;
       {% for page in site.bannerpages %}
         {% if page.name %}
-	    <a href={{ /page.name/ | lower | prepend: site.baseurl }}>{{ page.name }}</a>
+	    <a href={{ /page.name/ | prepend: site.baseurl }}>{{ page.name }}</a>
 	    &nbsp;&nbsp;·&nbsp;&nbsp;
 	{% endif %}
       {% endfor %}
