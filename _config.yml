@@ -73,7 +73,7 @@ social:
     share_title: ?title=
     share_link: "&amp;url="
 
-pages:
+bannerpages:
   - name:       Notebooks
     url:        "{{ '/notebooks/' | prepend: site.baseurl }}"
 
