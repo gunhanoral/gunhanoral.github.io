@@ -12,7 +12,7 @@ tags:
   - sip helper
   - sip attack
 image: /assets/article_images/2015-05-04-sip-guvenligi/Phoneslarge.jpg
-published: true
+published: false
 ---
 
 # Yapı

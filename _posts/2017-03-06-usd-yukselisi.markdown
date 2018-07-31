@@ -12,6 +12,7 @@ tags:
   - parite
 image: /assets/article_images/2017-03-06-usd-yukselisi/currency.jpg
 image2: /assets/article_images/2017-03-06-usd-yukselisi/currency_mob.jpg
+published: false
 ---
 Uzunca bir süredir doların yükseldiğini hepimiz biliyoruz. Peki ne kadar zamanda bu noktaya geldik? Eskiden nasıldı?
 
