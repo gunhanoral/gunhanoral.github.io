@@ -18,13 +18,13 @@ published: true
 - cihazlar belli bir şablondan çıkmış olacağı için unutulmuş kısımlar olmayacak,
 - değişiklikleri cihazlara uygulamak kolaylaşacak.
 
-Bu amaçlarımıza Python ve Python'ın Jinja2 modülü yardımıyla ulaşacağız. Eğer sisteminizde Python yoksa [buradan indirebilir]('http://www.python.org/download'), Jinja2 eksikse de `pip install jinja2` komutunu çalıştırarak yükleyebilirsiniz.
+Bu amaçlarımıza Python ve Python'ın Jinja2 modülü yardımıyla ulaşacağız. Eğer sisteminizde Python yoksa [buradan indirebilir][1], Jinja2 eksikse de `pip install jinja2` komutunu çalıştırarak yükleyebilirsiniz.
 
 # Şablonlar
 
 Hızlıca başlayalım. Aşağıda cihazımıza loopback interface'i ayarlamak için bir template/şablon kullanıyoruz.
 
-```
+``` python
 from jinja2 import Template
 
 # Şablonumuzu tanımlıyoruz
@@ -43,12 +43,12 @@ Yukarıdaki kodu çalıştırırsanız ekrana "interface loopback0" ve "exit" ya
 
 Bu kısımda şablonda belirlediğimiz alanlara istediklerimizi yazdıracağız. Örneğin:
 
-```
+``` python
 from jinja2 import Template
 
 # Şablonumuzu tanımlıyoruz
 config = """interface loopback0
-ip address {{ ip_address }} {{ netmask }}
+ip address \{{ ip_address \}} \{{ netmask \}}
 exit
 """
 template = Template(config)
@@ -66,9 +66,9 @@ exit
 
 Farkettiyseniz çift tırnak (süslü) parantez ile belirttiğimiz noktaların içini doldurduk. Jinja2'de değişkenler bu şekilde tanımlanıyor; `{{ degisken_adi }}`. Daha sonra da değişkenlere verdiğimiz değerlerle bu alanların içini dolduruyoruz.
 
-Yeni bir şey deneyelim:
+Yukarıdakini biraz daha farklı bir şekilde yazalım:
 
-```
+``` python
 from jinja2 import Template
 
 # Şablonumuzu tanımlıyoruz
@@ -80,8 +80,8 @@ template = Template(config)
 
 # Değişkenlerimizi tanımlıyoruz
 degiskenler = {
-'ip_address': '2.3.4.5',
-'netmask': '255.255.255.255'
+'ip_address': '1.2.3.4',
+'netmask': '255.255.255.0'
 }
 
 # Şablonumuzun içini değişkenlerle doldurup ekrana yazdıralım
@@ -90,7 +90,7 @@ print(template.render(**degiskenler))
 
 Süper, her şey güzel gidiyor. Ancak sadece bir cihaz için bir interface tanımladık. Bu kadarla kısıtlı kalmayacak herhalde, değil mi?
 
-```
+``` python
 from jinja2 import Template
 
 # Şablonumuzu tanımlıyoruz
@@ -123,7 +123,7 @@ for device in devices:
 
 Her cihaz sadece bir adet interface'e sahip olmayacak, değil mi?
 
-```
+``` python
 from jinja2 import Template
 
 # Şablonumuzu tanımlıyoruz
@@ -213,7 +213,7 @@ hostname R3
 
 Son olarak şartlı durumları inceleyelim. Her interface bir description'a sahip olmayabilir. Ya da bazı interface'ler ospf'e dahil edilirken bazıları edilmeyecektir. Template'imizi bu durumlara göre uyarlayalım.
 
-```
+``` python
 from jinja2 import Template
 
 # Şablonumuzu tanımlıyoruz
@@ -320,3 +320,5 @@ exit
 # Sonuç
 
 Jinja2 template'lerini cihazlarınızı belli bir standarta oturtmak için kullanabilirsiniz. Ayrıca cihaz config'i oluşturmak için büyük kolaylık sağladığı gibi hataları da azaltacaktır (Aaa ben o cihaza snmp config'i girmemiş miyim? tüh >.> ). Bunların yanısıra eğer Ansible veya benzeri bir configuration management tool'u kullanıyorsanız template'i değiştirmeniz ve bunu cihazlarınız üzerinde kullanmanız tüm network config'ini değiştirmenize olanak tanıyacaktır. Büyük kolaylık sağladığı gibi büyük hatalara da yol açabilir, dikkatli olun.
+
+[1]: https://www.python.org/downloads/
