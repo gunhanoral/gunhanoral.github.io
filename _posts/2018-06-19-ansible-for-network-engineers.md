@@ -21,13 +21,13 @@ published: false
 
 > Ya da CLI neyinize yetmiyor?
 
-Artık tekrarlı işlerde otomasyona alışıp CLI'da hızlıca bir şeyler yapmayı unuttuğumdan mıdır nedir, geçen hafta altı tane cihazın her birine üç beş satırlık snmp konfigürasyonu girmem yarım saatimden fazlasını aldı. Benim yavaşlığım tabi ki bir etmen ama kendimi savunmak adına bağlandığım MSANların aşırı yavaş çalıştığını, write etmenin bir dakika falan aldığını söylemek istiyorum. 
+Artık tekrarlı işlerde otomasyona alışıp CLI'da hızlıca bir şeyler yapmayı unuttuğumdan mıdır nedir, geçen hafta altı tane cihazın her birine üç beş satırlık snmp konfigürasyonu girmem yarım saatimden fazlasını aldı. Benim yavaşlığım tabi ki bir etmen ama kendimi savunmak adına bağlandığım MSANların aşırı yavaş çalıştığını, write'ın bir dakikadan fazla zaman aldığını söylemek istiyorum. 
 
 Ama ne gerek var ki? Yani aynı konfiği 6 ya da 60 cihaza girmek bana bir şey katmıyor. Neden hepsiyle tek tek uğraşayım? Ona ayıracağım vakti diğer network işlerine ayırmak, kendimi geliştirmekle harcamak daha anlamlı geliyor.
 
-Aslında cevap belli; **ya bir sorun çıkarsa?** SNMP'de bir kesinti hizmet kesintisi yaratmaz hadi ama interface / port tanımlarındaki değişiklikler? Bir MSAN'dan yüzlerce müşteri bağlanıyor. Bir router'dan sayısız trafik geçiyor. Network mühendisi kontrolü altında olmayan bir değişikliğin etkilerini hiç bir yönetici düşünmek dahi istemez. 
+Aslında otomasyon yapılmamasının nedeni belli; **ya bir sorun çıkarsa?** SNMP'de bir kesinti hizmet kesintisi yaratmaz hadi ama interface / port tanımlarındaki değişiklikler? Bir MSAN'dan yüzlerce müşteri bağlanıyor. Bir router'dan sayısız trafik geçiyor. Network mühendisi kontrolü altında olmayan bir değişikliğin etkilerini hiç bir yönetici düşünmek dahi istemez. 
 
-Üniversitede Sungur Hoca "Mühendislik bir trade-off'tur" derdi (Trade-off: ödünleşim). Otomasyonda da insan hatasını ve yavaşlığını minimuma indirirken... neyi artırıyoruz? Riski mi? Gelin biraz daha detaya inelim.
+Mühendislik bir trade-off'tur, denir (Trade-off: ödünleşim). Otomasyonda da insan hatasını ve yavaşlığını minimuma indirirken... neyi artırıyoruz? Riski mi? Gelin biraz daha detaya inelim.
 
 ## CLI ve otomasyon
 
@@ -35,9 +35,9 @@ CLI - Command Line Interface insanlar için üretilmiş bir arayüzdür. Girilen
 
 Json, xml gibi formatlar bilgisayarlar için daha uygun. Bu nedenle bir çok network firması cihazlarına bu formatları kullanarak erişmenizi sağlayan API - Application Programming Interface koyuyor. Ben de Fortigate'ime bir isim - ip listesi verip yüzlerce adres oluşturabiliyorum. Mis gibi işlem. 
 
-Ben daha öğrenmemiş olsam da Netconf yine çok kullanılan ve işlevsel bir konfigürasyon metodu. SSH üzerinden cihazla iletişime geçerek XML formatında veri alışverişi yapıyor. 
+Netconf yine çok kullanılan ve işlevsel bir konfigürasyon metodu. SSH üzerinden cihazla iletişime geçerek XML formatında veri alışverişi yapıyor. 
 
-REST kullanan API'ler bence daha güzel. Json daha okunabilir bir formatta olduğu için bana daha rahat geliyor. REST web portlarını kullanarak işlem yapmanıza olanak sağlıyor. 
+REST kullanan API'ler bence daha güzel. Json daha okunabilir bir formatta olduğu için bana daha rahat geliyor. REST, web portlarını kullanarak işlem yapmanıza olanak sağlıyor. 
 
 ## Ansible ne yapıyor peki?
 
