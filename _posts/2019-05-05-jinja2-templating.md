@@ -64,7 +64,8 @@ ip address 1.2.3.4 255.255.255.0
 exit
 ```
 
-Farkettiyseniz çift tırnak (süslü) parantez ile belirttiğimiz noktaların içini doldurduk. Jinja2'de değişkenler bu şekilde tanımlanıyor; `{{ degisken_adi }}`. Daha sonra da değişkenlere verdiğimiz değerlerle bu alanların içini dolduruyoruz.
+Farkettiyseniz çift tırnak (süslü) parantez ile belirttiğimiz noktaların içini doldurduk. Jinja2'de değişkenler bu şekilde tanımlanıyor;
+`{{ degisken_adi }}`. Daha sonra da değişkenlere verdiğimiz değerlerle bu alanların içini dolduruyoruz.
 
 Yukarıdakini biraz daha farklı bir şekilde yazalım:
 
@@ -118,6 +119,21 @@ devices = [
 for device in devices:
     print(template.render(**device))
 ```
+Tebrikler, artık her cihaz için bir çıktı oluşturabiliyorsunuz.
+
+```
+! ### R1 için config ###
+interface loopback0
+ip address 2.3.4.5 255.255.255.255
+exit
+! ### R1 için config ###
+
+! ### R2 için config ###
+interface loopback0
+ip address 22.33.44.55 255.255.255.0
+exit
+! ### R2 için config ###
+```
 
 # Döngüler
 
@@ -129,12 +145,12 @@ from jinja2 import Template
 # Şablonumuzu tanımlıyoruz
 config = """! ### {{ device_name }} için config ###
 hostname {{ device_name }}
-{% for interface in interfaces %}
+{% for interface in interfaces %} # Bu kısma dikkat!
 interface {{ interface.name }}
 description {{ interface.description }}
 ip address {{ interface.ip_address }} {{ interface.netmask }}
 exit
-{% endfor %}
+{% endfor %} # Ve buraya
 ! ### {{ device_name }} için config ###
 
 """
@@ -173,7 +189,7 @@ for device in devices:
     print(template.render(**device))
 ```
 
-Değişken yapısını değiştirdim. Artık her bir cihazın altında "interfaces" isimli bir list daha var ve bu dictionary interface değişkenlerinin olduğu birer dictionarylerden oluşuyor.
+Değişken yapısını değiştirdim. Artık her bir cihazın altında "interfaces" isimli birer list daha var ve bu list'ler interface değişkenlerinin olduğu dictionarylerden oluşuyor.
 
 `{% for interface in interfaces %}` ve `{% endfor %}` arasındaki kısım değişkenlerimizdeki her bir interface için derlenecek. R1 cihazı 2 interface'e sahip olduğu için bu iki interface'in configleri derlenip yazdırıldı, R2'de 1 interface vardı, R3'te ise hiç interface olmadığı için ekrana interface ile ilgili hiç bir şey yazdırılmadı:
 
@@ -211,7 +227,7 @@ hostname R3
 
 # Şartlı durumlar
 
-Son olarak şartlı durumları inceleyelim. Her interface bir description'a sahip olmayabilir. Ya da bazı interface'ler ospf'e dahil edilirken bazıları edilmeyecektir. Template'imizi bu durumlara göre uyarlayalım.
+Son olarak şartlı durumları inceleyelim. Her interface bir description'a sahip olmayabilir. Ya da bazı interface'ler ospf'e dahil edilirken bazıları edilmeyecektir. Template'imizi bu durumlara göre uyarlayalım. If, else ve endif anahtarlarına dikkat edin.
 
 ``` python
 from jinja2 import Template
@@ -274,7 +290,7 @@ for device in devices:
     print(template.render(**device))
 ```
 
-Çıktıda görebileceğiniz üzere R1'in Loopback10 interface'inde ospf komutu yok, R3'ün Loopback0'ında description girmediğimiz için şablondaki description ile ilgili şartlı durumun "else" kısmı çalışmış ve description olarak "NO DESC" yazılmış.
+Aşağıdaki çıktıda görebileceğiniz üzere R1'in Loopback10 interface'inde ospf komutu yok, R3'ün Loopback0'ında description girmediğimiz için şablondaki description ile ilgili şartlı durumun "else" kısmı çalışmış ve description olarak "NO DESC" yazılmış.
 
 ```
 ! ### R1 için config ###
