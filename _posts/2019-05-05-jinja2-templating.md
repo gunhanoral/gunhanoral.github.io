@@ -145,12 +145,12 @@ from jinja2 import Template
 # Şablonumuzu tanımlıyoruz
 config = """! ### {{ device_name }} için config ###
 hostname {{ device_name }}
-{% for interface in interfaces %} # Bu kısma dikkat!
+{% for interface in interfaces %} ## !Bu kısma dikkat!
 interface {{ interface.name }}
 description {{ interface.description }}
 ip address {{ interface.ip_address }} {{ interface.netmask }}
 exit
-{% endfor %} # Ve buraya
+{% endfor %} ## !Ve buraya
 ! ### {{ device_name }} için config ###
 
 """
