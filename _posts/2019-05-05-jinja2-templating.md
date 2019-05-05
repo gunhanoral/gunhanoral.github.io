@@ -10,7 +10,7 @@ tags:
 image: no
 published: true
 ---
-
+{% raw %}
 # Giriş
 
 Öncelikle bir özet ile başlayalım. Jinja2 çeşitli şablonlar üretmemize yarayan bir Python kütüphanesidir. Biz de bu şablonları network cihazlarının configlerini oluşturmada kullanacağız. Böylece;
@@ -48,7 +48,7 @@ from jinja2 import Template
 
 # Şablonumuzu tanımlıyoruz
 config = """interface loopback0
-ip address \{{ ip_address \}} \{{ netmask \}}
+ip address {{ ip_address }} {{ netmask }}
 exit
 """
 template = Template(config)
@@ -322,3 +322,4 @@ exit
 Jinja2 template'lerini cihazlarınızı belli bir standarta oturtmak için kullanabilirsiniz. Ayrıca cihaz config'i oluşturmak için büyük kolaylık sağladığı gibi hataları da azaltacaktır (Aaa ben o cihaza snmp config'i girmemiş miyim? tüh >.> ). Bunların yanısıra eğer Ansible veya benzeri bir configuration management tool'u kullanıyorsanız template'i değiştirmeniz ve bunu cihazlarınız üzerinde kullanmanız tüm network config'ini değiştirmenize olanak tanıyacaktır. Büyük kolaylık sağladığı gibi büyük hatalara da yol açabilir, dikkatli olun.
 
 [1]: https://www.python.org/downloads/
+{% endraw %}
